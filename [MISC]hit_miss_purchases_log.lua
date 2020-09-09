@@ -1,16 +1,4 @@
---通知前置
-http.get("https://raw.githubusercontent.com/Potatoes0/Eager-to/master/%5BMISC%5Dnotify.lua", function(success, response)
-  --User have to subscribe to the following link https://gamesense.pub/forums/viewtopic.php?pid=242661#p242661
-  if not success or response.status ~= 200 then
-    return
-  end
 
-  loadstring(response.body)()
-
-  print("Downloaded script from server")
-  --print("stuff u wanna print in consle")
-
-end)
 local notifs = { "Log hit/miss dealt", "Weapon purchases" }
 
 local log_misses = ui.reference("RAGE", "Aimbot", "Log misses due to spread")
